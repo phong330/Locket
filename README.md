@@ -1,7 +1,4 @@
 # phong330 — Shadowrocket & DNS
-
-Trang cài đặt cấu hình Shadowrocket, module và hồ sơ DNS dành cho iPhone.
-
 ## 🚀 Cài nhanh trên iPhone
 
 ### 👉 [MỞ TRANG CÀI ĐẶT PHONG330](https://phong330.github.io/Locket/index.html)
@@ -22,7 +19,3 @@ Mở đường dẫn trên bằng **Safari trên iPhone**, sau đó chọn nút 
 | Hồ sơ DNS gốc `.mobileconfig` | [LocketGold.mobileconfig](https://phong330.github.io/Locket/assets/LocketGold.mobileconfig) |
 
 > **Lưu ý:** Các đường dẫn Shadowrocket chỉ thử mở ứng dụng trên iPhone đã cài Shadowrocket. Safari có thể tải hồ sơ DNS thay vì chuyển thẳng vào Cài đặt. DNS không tự cấp quyền Locket Gold. Chỉ cài hồ sơ DNS khi bạn tin tưởng nhà cung cấp.
-
----
-
-Kho mã nguồn: [github.com/phong330/Locket](https://github.com/phong330/Locket). Đây là cấu hình cá nhân hóa dựa trên mã nguồn bên thứ ba; giữ nguyên thông tin ghi nhận và giấy phép của tác giả gốc.
