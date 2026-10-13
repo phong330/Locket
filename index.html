@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#101827">
+  <title>phong330 | Cài đặt cấu hình</title>
+  <style>
+    :root{color-scheme:dark;font-family:system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif}
+    *{box-sizing:border-box}body{margin:0;min-height:100vh;background:radial-gradient(ellipse at top,#1e3455 0%,#101827 58%);color:#f8fafc;display:grid;place-items:center;padding:28px 18px}
+    main{width:min(100%,540px)}header{text-align:center;margin-bottom:24px}.logo{display:inline-grid;place-items:center;width:68px;height:68px;background:#2563eb;border-radius:21px;font-weight:800;font-size:27px;box-shadow:0 10px 35px #1d4ed855}h1{font-size:30px;margin:15px 0 6px}p{color:#bdc8d8;line-height:1.55;font-size:14px}
+    .panel{background:#ffffff0c;border:1px solid #ffffff22;border-radius:19px;padding:20px;margin:16px 0;box-shadow:0 12px 35px #00000020}.panel h2{font-size:17px;margin:0 0 7px}.panel p{margin:0 0 15px}.btn{display:flex;justify-content:center;align-items:center;gap:9px;min-height:49px;border-radius:12px;background:#3b82f6;color:white;text-decoration:none;font-weight:700;font-size:15px;padding:12px;text-align:center}.btn.secondary{background:#374151}.btn.green{background:#059669}.fallback{display:block;text-align:center;color:#a5c8ff;margin-top:12px;font-size:13px;word-break:break-word}.note{background:#1f2937;border-radius:13px;padding:13px 15px;color:#d2dae5;margin-top:22px;font-size:13px;line-height:1.6}footer{text-align:center;color:#8997ab;font-size:12px;margin-top:24px}a:focus-visible{outline:3px solid white;outline-offset:3px}
+  </style>
+</head>
+<body>
+<main>
+ <header><div class="logo">P</div><h1>phong330</h1><p>Trang cài đặt cấu hình Shadowrocket &amp; hồ sơ DNS trên iPhone</p></header>
+ <section class="panel"><h2>🚀 Cấu hình Shadowrocket</h2><p>Chạm nút dưới trên iPhone có cài Shadowrocket để thêm cấu hình.</p>
+ <a class="btn" href="shadowrocket://config/add/https://raw.githubusercontent.com/phong330/Locket/main/phong330.conf">Mở trong Shadowrocket</a>
+ <a class="fallback" href="https://raw.githubusercontent.com/phong330/Locket/main/phong330.conf">Không mở được? Tải file .conf</a></section>
+ <section class="panel"><h2>🧩 Module Shadowrocket</h2><p>Tùy chọn. Không cần cài đồng thời nếu cấu hình chính đã chứa các quy tắc này.</p>
+ <a class="btn secondary" href="shadowrocket://install?module=https%3A%2F%2Fraw.githubusercontent.com%2Fphong330%2FLocket%2Fmain%2Fphong330.sgmodule">Mở module trong Shadowrocket</a>
+ <a class="fallback" href="https://raw.githubusercontent.com/phong330/Locket/main/phong330.sgmodule">Không mở được? Tải file .sgmodule</a></section>
+ <section class="panel"><h2>🌐 Hồ sơ DNS iPhone</h2><p>Tải hồ sơ DNS qua Safari, sau đó vào Cài đặt → Đã tải về hồ sơ để xem và cài đặt.</p>
+ <a class="btn green" href="https://raw.githubusercontent.com/phong330/Locket/main/assets/LocketGold_phong330.mobileconfig">Tải hồ sơ DNS</a>
+ <a class="fallback" href="https://github.com/phong330/Locket/blob/main/assets/LocketGold_phong330.mobileconfig">Xem file DNS trên GitHub</a></section>
+ <div class="note">ℹ️ Mở trang này bằng <strong>Safari trên iPhone</strong>. iOS có thể yêu cầu xác nhận trước khi mở Shadowrocket hoặc tải hồ sơ cấu hình. GitHub Raw có thể tải file DNS thay vì hiển thị lời nhắc cài hồ sơ. Chỉ cài cấu hình, script và DNS từ nguồn bạn tin tưởng; cấu hình DNS sử dụng máy chủ bên thứ ba.</div>
+ <footer>phong330 · <a style="color:#a5c8ff" href="https://github.com/phong330/Locket">GitHub repository</a></footer>
+</main>
+</body>
+</html>
