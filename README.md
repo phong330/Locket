@@ -26,19 +26,6 @@ Trên iPhone, mở link DNS bằng Safari. Nếu được đề nghị tải h�
 
 **Quyền riêng tư:** Hồ sơ có thể sử dụng máy chủ DNS-over-HTTPS của bên thứ ba `my.ublockdns.com`. Tên `phong330` là tên hiển thị cá nhân, không phải nhà cung cấp DNS riêng và không bảo đảm tính năng trả phí của ứng dụng.
 
-## 📂 Thư mục
-
-```text
-Locket/
-├── assets/
-├── js/
-├── modules/
-├── phong330.conf
-├── phong330.sgmodule
-├── index.html
-└── README.md
-```
-
 ## Nguồn mã
 
 Cấu hình cá nhân hóa của **phong330**, dựa trên [duyvinh09/Module_IOS](https://github.com/duyvinh09/Module_IOS). Quyền tác giả các mã nguồn gốc thuộc về tác giả tương ứng. Các script chưa được kiểm thử trên tất cả phiên bản Shadowrocket và iOS.
