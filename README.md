@@ -1,21 +1,22 @@
-# phong330 — Shadowrocket & DNS
-## 🚀 Cài nhanh trên iPhone
+# Hướng Dẫn Sử Dụng Module IOS với Shadowrocket
 
-### 👉 [MỞ TRANG CÀI ĐẶT PHONG330](https://phong330.github.io/Locket/index.html)
+## Bước 1: Tải Ứng Dụng Shadowrocket
+- Truy cập App Store trên iPhone và tìm kiếm ứng dụng **Shadowrocket** để tải về.
+- Nếu không có tài khoản để tải, bạn có thể truy cập vào [link này](https://idapple.csadata4g.me/) để lấy tài khoản và mật khẩu đăng nhập vào App Store. 
+    - **Lưu ý:** Chỉ đăng nhập trong App Store, không đăng nhập trong phần Cài Đặt của máy.
+    - Nếu link bị hỏng, vui lòng liên hệ riêng với **Vinh** để được hỗ trợ.
 
-Mở đường dẫn trên bằng **Safari trên iPhone**, sau đó chọn nút phù hợp:
+## Bước 2: Cài Đặt Module
+1. Sao chép link module cần sử dụng:
+    - [Locket Module](https://raw.githubusercontent.com/duyvinh09/Module_IOS/refs/heads/main/modules/Locket_duyvinh09.sgmodule)
+    - [All In One Module](https://raw.githubusercontent.com/duyvinh09/Module_IOS/refs/heads/main/All_In_One.sgmodule)
+2. Mở ứng dụng **Shadowrocket**.
+3. Chuyển đến tab **Cấu Hình**.
+4. Nhấn vào dấu **+** (thêm mới).
+5. Dán link module đã sao chép vào, sau đó tải xuống và cài đặt.
 
-- **Cấu hình Shadowrocket:** Nhấn *Mở trong Shadowrocket*.
-- **Module phong330:** Nhấn *Mở module trong Shadowrocket* (tùy chọn; tránh bật quy tắc trùng với cấu hình chính).
-- **Hồ sơ DNS:** Nhấn *Tải hồ sơ DNS phong330*, rồi vào **Cài đặt → Đã tải về hồ sơ** nếu iOS nhận diện được hồ sơ.
+## Bước 3: Kích Hoạt VPN
+- Sau khi cài đặt module, chuyển sang tab **Nhà**.
+- Bật VPN để kích hoạt và sử dụng module.
 
-## 🔗 Liên kết dự phòng
-
-| Nội dung | Link |
-|---|---|
-| Trang cài đặt | [Mở trang phong330](https://phong330.github.io/Locket/index.html) |
-| Cấu hình `.conf` | [phong330.conf](https://raw.githubusercontent.com/phong330/Locket/main/phong330.conf) |
-| Module `.sgmodule` | [phong330.sgmodule](https://raw.githubusercontent.com/phong330/Locket/main/phong330.sgmodule) |
-| Hồ sơ DNS gốc `.mobileconfig` | [LocketGold.mobileconfig](https://phong330.github.io/Locket/assets/LocketGold.mobileconfig) |
-
-> **Lưu ý:** Các đường dẫn Shadowrocket chỉ thử mở ứng dụng trên iPhone đã cài Shadowrocket. Safari có thể tải hồ sơ DNS thay vì chuyển thẳng vào Cài đặt. DNS không tự cấp quyền Locket Gold. Chỉ cài hồ sơ DNS khi bạn tin tưởng nhà cung cấp.
+Chúc bạn thành công!
