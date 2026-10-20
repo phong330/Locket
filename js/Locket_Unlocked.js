@@ -371,7 +371,7 @@ if (ua.includes("Locket")) {
                     { overlay_id: "caption:streak", source: "local", caption: { type: "streak" } },
                     { overlay_id: "caption:star_sign", source: "local", caption: { type: "star_sign" } },
                     { overlay_id: "caption:color_palette", source: "local", caption: { type: "color_palette" } },
-                    { overlay_id: "caption:live", source: "local", caption: { type: "live" } },
+                    { overlay_id: "caption:breaking_news", source: "local", caption: { type: "breaking_news" } },
                     { overlay_id: "caption:locket_count", source: "local", caption: { type: "locket_count" } },
                 ]
             },
@@ -409,7 +409,7 @@ if (ua.includes("Locket")) {
                     { overlay_id: "caption:du_an_ma", source: "remote", caption: { background: { colors: ["#263238", "#455A64"] }, icon: { data: "👻", type: "emoji" }, max_lines: 1, text: "dự án ma", text_color: "#FFFFFFE6", type: "static_content" } },
                     { overlay_id: "caption:love_vietnam", source: "remote", alt_text: "Tôi yêu Việt Nam", caption: { background: { image: { type: "image", data: "star_sign_background", source: "local" }, colors: ["#DA251D", "#DA251D"] }, icon: { type: "image", data: "https://storage.googleapis.com/locket-public/journal_calendar_assets/holiday_indicators/valentines_indicator%403x.png", source: "url" }, max_lines: 1, text: "Tôi yêu Việt Nam", text_color: "#FFFF00", type: "static_content" } },
                     { overlay_id: "caption:film_diary", source: "remote", alt_text: "Một ngày rất chill", caption: { background: { image: { type: "image", data: "https://public.locketcamera.com/locket-public/gold_promos/gold_promo_camera_roll.png", source: "url" }, colors: ["#D2B48C", "#8B4513"] }, icon: { type: "image", data: "https://public.locketcamera.com/locket-public/journal_calendar_assets/holiday_indicators/st_patricks_indicator%403x.png", source: "url" }, max_lines: 1, text: "Một ngày rất chill", text_color: "#FFFDD0", type: "static_content" } },
-                    { overlay_id: "caption:strangers", source: "remote", alt_text: "Người lạ", caption: { background: { image: { type: "image", data: "https://public.locketcamera.com/locket-public/gold_promos/gold_promo_views.png", source: "url" }, colors: ["#1C1C1E", "#2C2C2E"], material_blur: "regular" }, icon: { data: "eye.fill", type: "sf_symbol", color: "#0A84FF" }, max_lines: 1, text: "Người lạ", text_color: "#FFFFFF", type: "static_content" } },
+                    { overlay_id: "caption:strangers", source: "remote", alt_text: "Người lạ", caption: { background: { image: { type: "image", data: "https://public.locketcamera.com/locket-public/gold_promos/gold_promo_views.png", source: "url" }, colors: ["#1C1C1E", "#2C2C2E"] }, icon: { data: "eye.fill", type: "sf_symbol", color: "#0A84FF" }, max_lines: 1, text: "Người lạ", text_color: "#FFFFFF", type: "static_content" } },
                     { overlay_id: "caption:genz_flex", source: "remote", alt_text: "Mood: Chill", caption: { background: { image: { type: "image", data: "https://public.locketcamera.com/locket-public/gold_promos/gold_promo_widgets.png", source: "url" }, colors: ["#FF9A9E", "#FECFEF"] }, icon: { data: "camera.fill", type: "sf_symbol", color: "#FF007F" }, max_lines: 1, text: "Mood: Chill 💅", text_color: "#FFFFFF", type: "static_content" } },
                 ]
             },
@@ -480,7 +480,8 @@ if (ua.includes("Locket")) {
                     { overlay_id: "caption:che_manh", source: "remote", caption: { background: { colors: ["#FF4E50", "#F9D423"] }, icon: { data: "👎", type: "emoji" }, max_lines: 1, text: "Chê mạnh", text_color: "#FFFFFF", type: "static_content" } },
                     { overlay_id: "caption:chua_du_wow", source: "remote", caption: { background: { colors: ["#FFD1DC", "#FFB7C5", "#FFE4E1"] }, icon: { data: "🎀", type: "emoji" }, max_lines: 1, text: "Chưa đủ wow", text_color: "#6E4254", type: "static_content" } },
                     { overlay_id: "caption:roi_let_luon", source: "remote", caption: { background: { colors: ["#FF9A9E", "#FECFEF", "#FBC2EB", "#A6C1EE"] }, icon: { data: "💅", type: "emoji" }, max_lines: 1, text: "rồi lét luôn", text_color: "#000000E6", type: "static_content" } },
-                    { overlay_id: "caption:roi_gay_luon", source: "remote", caption: { background: { colors: ["#FF6EC7", "#7873F5", "#4ADEDE", "#FFE66D"] }, icon: { data: "🌈", type: "emoji" }, max_lines: 1, text: "rồi gay luôn", text_color: "#FFFFFFE6", type: "static_content" } }
+                    { overlay_id: "caption:roi_gay_luon", source: "remote", caption: { background: { colors: ["#FF6EC7", "#7873F5", "#4ADEDE", "#FFE66D"] }, icon: { data: "🌈", type: "emoji" }, max_lines: 1, text: "rồi gay luôn", text_color: "#FFFFFFE6", type: "static_content" } },
+                    { overlay_id: "caption:dang_truc_tiep", source: "remote", alt_text: "ĐANG TRỰC TIẾP", caption: { background: { material_blur: "regular" }, icon: { data: "circle.fill", type: "sf_symbol", color: "#FF3B30" }, max_lines: 1, text: "ĐANG TRỰC TIẾP", text_color: "#FFFFFF", type: "static_content" } },                
                 ]
             },
             {
