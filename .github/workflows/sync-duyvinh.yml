@@ -1,3 +1,4 @@
+```yaml
 name: Sync Duy Vinh (Hourly)
 
 on:
@@ -15,6 +16,7 @@ concurrency:
 jobs:
   sync:
     runs-on: ubuntu-latest
+
     steps:
       - name: Checkout phong330/Locket
         uses: actions/checkout@v4
@@ -24,7 +26,7 @@ jobs:
 
       - name: Download latest original source
         run: |
-          git clone --depth 1 --branch main https://github.com/duyvinh09/Module_IOS.git "$RUNNER_TEMP/upstream"
+          git clone --depth 1 --branch main https://github.com/dinhduyvinh09/AppPre.git "$RUNNER_TEMP/upstream"
 
       - name: Mirror original files (keep automation itself)
         run: |
@@ -37,10 +39,14 @@ jobs:
         run: |
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+
           git add -A
+
           if git diff --cached --quiet; then
             echo 'Already up to date.'
             exit 0
           fi
-          git commit -m 'Sync latest files from duyvinh09/Module_IOS'
+
+          git commit -m 'Sync latest files from dinhduyvinh09/AppPre'
           git push origin HEAD:main
+```
