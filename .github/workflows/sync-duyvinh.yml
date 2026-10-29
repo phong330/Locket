@@ -18,7 +18,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout phong330/Locket
+      - name: Checkout personal repository
         uses: actions/checkout@v4
         with:
           ref: main
@@ -37,20 +37,44 @@ jobs:
             --exclude='/.github/' \
             "$RUNNER_TEMP/upstream/" ./
 
-      - name: Change displayed name only
+      - name: Add personal label and preserve attribution
         run: |
           python3 - <<'PY'
           from pathlib import Path
 
           path = Path("index.html")
 
-          if path.exists():
-              html = path.read_text(encoding="utf-8")
-              html = html.replace("Đinh Duy Vinh", "phong330")
-              path.write_text(html, encoding="utf-8")
-              print("Da doi ten hien thi thanh phong330.")
+          if not path.exists():
+              raise SystemExit("Khong tim thay index.html")
+
+          html = path.read_text(encoding="utf-8")
+
+          subtitle = (
+              '<p class="text-gray-600" data-i18n="subtitle">'
+              'Dành cho iPhone sử dụng ứng dụng '
+              '<span class="font-semibold">ShadowRocket</span></p>'
+          )
+
+          label = (
+              '<p id="personal-brand" '
+              'class="text-xs text-gray-500 mt-2">'
+              'Bản cá nhân: phong330</p>'
+          )
+
+          if 'id="personal-brand"' not in html:
+              if subtitle in html:
+                  html = html.replace(
+                      subtitle,
+                      subtitle + "\n" + label,
+                      1
+                  )
+                  print("Da them nhan phong330.")
+              else:
+                  print("Khong tim thay vi tri chen nhan; giu nguyen HTML.")
           else:
-              print("Khong tim thay index.html.")
+              print("Nhan phong330 da ton tai.")
+
+          path.write_text(html, encoding="utf-8")
           PY
 
       - name: Commit and push changes
@@ -65,5 +89,5 @@ jobs:
             exit 0
           fi
 
-          git commit -m 'Sync AppPre and change displayed name'
+          git commit -m 'Sync AppPre and add personal label'
           git push origin HEAD:main
