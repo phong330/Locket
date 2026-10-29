@@ -24,7 +24,7 @@ jobs:
           ref: main
           persist-credentials: true
 
-      - name: Download latest AppPre source
+      - name: Download latest source from Vinh
         run: |
           git clone --depth 1 --branch main \
             https://github.com/dinhduyvinh09/AppPre.git \
@@ -37,39 +37,20 @@ jobs:
             --exclude='/.github/' \
             "$RUNNER_TEMP/upstream/" ./
 
-      - name: Personalize name and keep original destinations
+      - name: Change displayed name only
         run: |
           python3 - <<'PY'
           from pathlib import Path
 
           path = Path("index.html")
-          html = path.read_text(encoding="utf-8")
 
-          # Change displayed name only; preserve existing link destinations
-          html = html.replace(
-              ">Đinh Duy Vinh</a>",
-              ">phong330</a>"
-          )
-
-          # Fix the stale Fake GPS button to match the current AppPre source
-          old = (
-              "shadowrocket://install?module="
-              "https%3A%2F%2Fraw.githubusercontent.com%2Fduyvinh09"
-              "%2FModule_IOS%2Frefs%2Fheads%2Fmain"
-              "%2Fmodules%2Fios-location-spoofer.sgmodule"
-          )
-
-          new = (
-              "shadowrocket://install?module="
-              "https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Fdinhduyvinh09"
-              "%2FAppPre%40refs%2Fheads%2Fmain"
-              "%2Fmodules%2Fios-location-spoofer.sgmodule"
-          )
-
-          html = html.replace(old, new)
-
-          path.write_text(html, encoding="utf-8")
-          print("Updated personal display name and Fake GPS link.")
+          if path.exists():
+              html = path.read_text(encoding="utf-8")
+              html = html.replace("Đinh Duy Vinh", "phong330")
+              path.write_text(html, encoding="utf-8")
+              print("Da doi ten hien thi thanh phong330.")
+          else:
+              print("Khong tim thay index.html.")
           PY
 
       - name: Commit and push changes
@@ -84,5 +65,5 @@ jobs:
             exit 0
           fi
 
-          git commit -m 'Sync AppPre and personalize display name'
+          git commit -m 'Sync AppPre and change displayed name'
           git push origin HEAD:main
