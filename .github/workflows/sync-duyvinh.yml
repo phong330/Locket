@@ -18,7 +18,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout personal repository
+      - name: Checkout phong330/Locket
         uses: actions/checkout@v4
         with:
           ref: main
@@ -37,7 +37,7 @@ jobs:
             --exclude='/.github/' \
             "$RUNNER_TEMP/upstream/" ./
 
-      - name: Apply personal website branding
+      - name: Personalize name and keep original destinations
         run: |
           python3 - <<'PY'
           from pathlib import Path
@@ -45,64 +45,31 @@ jobs:
           path = Path("index.html")
           html = path.read_text(encoding="utf-8")
 
-          # Fix Fake GPS button to use the new AppPre source
-          old_url = (
+          # Change displayed name only; preserve existing link destinations
+          html = html.replace(
+              ">Đinh Duy Vinh</a>",
+              ">phong330</a>"
+          )
+
+          # Fix the stale Fake GPS button to match the current AppPre source
+          old = (
               "shadowrocket://install?module="
               "https%3A%2F%2Fraw.githubusercontent.com%2Fduyvinh09"
               "%2FModule_IOS%2Frefs%2Fheads%2Fmain"
               "%2Fmodules%2Fios-location-spoofer.sgmodule"
           )
 
-          new_url = (
+          new = (
               "shadowrocket://install?module="
               "https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Fdinhduyvinh09"
               "%2FAppPre%40refs%2Fheads%2Fmain"
               "%2Fmodules%2Fios-location-spoofer.sgmodule"
           )
 
-          html = html.replace(old_url, new_url)
-
-          # Add your name under the website heading
-          subtitle = (
-              '<p class="text-gray-600" data-i18n="subtitle">'
-              'Dành cho iPhone sử dụng ứng dụng '
-              '<span class="font-semibold">ShadowRocket</span></p>'
-          )
-
-          personal_label = (
-              '<p class="text-xs text-gray-500 mt-2">'
-              'Bản cá nhân: phong330</p>'
-          )
-
-          if personal_label not in html and subtitle in html:
-              html = html.replace(
-                  subtitle, subtitle + "\n" + personal_label, 1
-              )
-
-          # Personal footer while retaining source attribution
-          old_footer = (
-              '© <span id="currentYear">2025</span> '
-              '<a href="https://me.momo.vn/dinhduyvinh" '
-              'target="_blank" '
-              'class="text-blue-600 hover:text-blue-700 hover:underline">'
-              'Đinh Duy Vinh</a>. '
-              '<span data-i18n="footer-rights">'
-              'All rights reserved.</span>'
-          )
-
-          new_footer = (
-              '© <span id="currentYear">2025</span> phong330 · '
-              'Bản cá nhân, mã nguồn từ '
-              '<a href="https://github.com/dinhduyvinh09/AppPre" '
-              'target="_blank" rel="noopener noreferrer" '
-              'class="text-blue-600 hover:text-blue-700 hover:underline">'
-              'AppPre</a>.'
-          )
-
-          html = html.replace(old_footer, new_footer)
+          html = html.replace(old, new)
 
           path.write_text(html, encoding="utf-8")
-          print("Da dong bo nguon va ap dung nhan phong330.")
+          print("Updated personal display name and Fake GPS link.")
           PY
 
       - name: Commit and push changes
@@ -117,5 +84,5 @@ jobs:
             exit 0
           fi
 
-          git commit -m 'Sync AppPre source and personalize website'
+          git commit -m 'Sync AppPre and personalize display name'
           git push origin HEAD:main
